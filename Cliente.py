@@ -29,10 +29,10 @@ class Cliente:
             self.__correo = correo
             self.__telefono = telefono
 
-        except ClienteError as e:
+        except ClienteError as error:
             with open("logs.txt", "a") as log:
-                log.write(f"Error Cliente: {e}\n")
-            print(f"Error: {e}")
+                log.write(f"Error Cliente: {error}\n")
+            print(f"Error: {error}")
 
     def get_tipo_documento(self):
         return self.__tipo_documento

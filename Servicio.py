@@ -11,10 +11,10 @@ class Servicio:
             
             self.__cliente = cliente
 
-        except ServicioError as e:
+        except ServicioError as error:
             with open("logs.txt", "a") as log:
-                log.write(f"Error Servicio: {e}\n")
-            print(f"Error: {e}")
+                log.write(f"Error Servicio: {error}\n")
+            print(f"Error: {error}")
 
     def get_cliente(self):
         return self.__cliente
